@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#f6f7f2">
+	<meta name="description" content="A complete JSS1 and JSS2 mathematics syllabus with clear notes, worked examples and practice questions.">
+	<title>Maths Made Easy | JSS Learning Studio</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js" defer></script>
+</head>
+<body>
+	<div class="app-shell">
+		<aside class="sidebar" aria-label="Syllabus navigation">
+			<a class="brand" href="#home" aria-label="Maths Made Easy home">
+				<span class="brand-mark" aria-hidden="true">∑</span>
+				<span class="brand-name">maths<span>made easy</span></span>
+			</a>
+
+			<div class="sidebar-label">YOUR CLASS</div>
+			<div class="class-switch" role="group" aria-label="Choose a class">
+				<button class="class-button is-active" data-class="JSS1" aria-pressed="true">JSS 1</button>
+				<button class="class-button" data-class="JSS2" aria-pressed="false">JSS 2</button>
+			</div>
+
+			<div class="sidebar-label term-label">TERM</div>
+			<div class="term-switch" role="group" aria-label="Choose a term">
+				<button class="term-button is-active" data-term="1" aria-pressed="true">01</button>
+				<button class="term-button" data-term="2" aria-pressed="false">02</button>
+				<button class="term-button" data-term="3" aria-pressed="false">03</button>
+			</div>
+
+			<div class="topic-nav-heading">
+				<span class="sidebar-label">TOPICS</span>
+				<span class="topic-count" id="topic-count">00</span>
+			</div>
+			<nav class="topic-nav" id="topic-nav" aria-label="Topics"></nav>
+
+			<div class="sidebar-bottom">
+				<div class="progress-ring" id="progress-ring" aria-label="0 percent complete"><span id="progress-percent">0%</span></div>
+				<div class="progress-copy"><strong>Your progress</strong><span id="progress-detail">0 of 0 topics</span></div>
+			</div>
+		</aside>
+
+		<main class="main-content" id="home">
+			<header class="topbar">
+				<div class="breadcrumb"><span>LEARNING SPACE</span><span class="crumb-slash">/</span><span id="breadcrumb-class">JSS 1</span></div>
+				<label class="search-box" for="topic-search">
+					<span class="search-icon" aria-hidden="true">⌕</span>
+					<input id="topic-search" type="search" placeholder="Find a topic..." autocomplete="off">
+					<kbd>/</kbd>
+				</label>
+			</header>
+
+			<section class="welcome-row" aria-labelledby="page-title">
+				<div class="welcome-copy">
+					<p class="eyebrow"><span class="eyebrow-dot"></span> YOUR MATHEMATICS CLASSROOM</p>
+					<h1 id="page-title">Make maths<br><span>make sense.</span></h1>
+					<p class="welcome-description">One topic at a time. Clear notes, worked examples, and practice that sticks.</p>
+				</div>
+				<div class="math-art" aria-hidden="true">
+					<span class="art-coordinate">x² + y²</span>
+					<span class="art-circle"></span>
+					<span class="art-orbit orbit-one"></span>
+					<span class="art-orbit orbit-two"></span>
+					<span class="art-dot dot-one"></span>
+					<span class="art-dot dot-two"></span>
+					<span class="art-cross">+</span>
+					<span class="art-number">π</span>
+				</div>
+			</section>
+
+			<section class="term-banner" aria-label="Selected term overview">
+				<div class="term-banner-main">
+					<span class="term-kicker" id="term-kicker">JSS 1 · TERM 1</span>
+					<h2 id="term-title">Number foundations</h2>
+					<p id="term-description">Build confidence with numbers, fractions and the way they connect.</p>
+				</div>
+				<div class="term-stats">
+					<div><strong id="stat-topics">00</strong><span>TOPICS</span></div>
+					<i></i>
+					<div><strong id="stat-questions">00</strong><span>QUESTIONS</span></div>
+				</div>
+				<span class="banner-mark" aria-hidden="true">01</span>
+			</section>
+
+			<section class="lesson-layout" aria-label="Syllabus lessons">
+				<div class="lesson-column">
+					<div class="section-heading">
+						<div><p class="eyebrow">THE SYLLABUS</p><h2>Explore your topics</h2></div>
+						<span class="heading-note" id="topic-range">01 — 04</span>
+					</div>
+					<div class="topic-grid" id="topic-grid"></div>
+				</div>
+
+				<aside class="focus-panel" id="focus-panel" aria-live="polite">
+					<div class="focus-topline"><span class="focus-tag">UP NEXT</span><button class="focus-close" id="focus-close" aria-label="Close lesson panel" title="Close lesson panel">×</button></div>
+					<p class="focus-empty-mark" aria-hidden="true">∠</p>
+					<p class="eyebrow">PICK A TOPIC</p>
+					<h2>Your next<br>big idea.</h2>
+					<p class="focus-empty-copy">Choose any topic to open its lesson, explore an example, and try the practice questions.</p>
+					<div class="focus-doodle" aria-hidden="true"><span>3</span><span>+</span><span>4</span><span>=</span><span>?</span></div>
+				</aside>
+			</section>
+
+			<footer class="page-footer">
+				<span>MATHS MADE EASY <span class="footer-dot">·</span> JSS 1—2</span>
+				<span>Topic order can vary between schools and state schemes.</span>
+			</footer>
+		</main>
+	</div>
+	<div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
